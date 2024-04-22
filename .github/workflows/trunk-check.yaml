@@ -1,4 +1,4 @@
-name: Trunk Check
+name: 🌳 Trunk Check
 run-name: ${{ fromJSON(inputs.payload).checkWorkflowRunName }}
 on:
   workflow_dispatch:
@@ -12,14 +12,14 @@ permissions:
 
 jobs:
   check:
-    name: ${{ fromJSON(inputs.payload).checkJobName }}
+    name: 👋 ${{ fromJSON(inputs.payload).checkJobName }}
     runs-on: ${{ fromJSON(inputs.payload).checkJobRunsOn }}
     concurrency:
       group: ${{ fromJSON(inputs.payload).concurrencyGroup }}
       cancel-in-progress: true
 
     steps:
-      - name: Trunk Check
+      - name: 🚀 Trunk Check
         uses: trunk-io/trunk-action@v1
         with:
           check-mode: payload
